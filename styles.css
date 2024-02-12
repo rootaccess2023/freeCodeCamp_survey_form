@@ -1,0 +1,355 @@
+/* Font Style Import */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Root */
+
+:root {
+    --primary-color: red;
+    --secondary-color: #ccc;
+}
+
+/* CSS Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+/* Elements */
+
+body {
+    background-image: url(https://i.ibb.co/74rvgZv/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 50rem;
+    min-width: 30rem;
+    padding: 5rem;
+    margin: 5rem 0rem;
+    opacity: 0.8;
+    border-radius: 1rem;
+    position: relative;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 650;
+}
+
+label[for^="maleOption"],
+label[for^="femaleOption"],
+label[for^="yes"] {
+    margin-right: 1rem;
+}
+
+
+
+select.form-dropdown {
+    width: 8.7rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5rem;
+    font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+input[type="color"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+    width: 18.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5rem;
+    font-size: 1.1rem;
+}
+
+
+
+input[type="checkbox"] + label {
+    margin-right: 1rem;
+}
+
+input[type="radio"] {
+    transform: scale(1.5);
+    margin-right: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+/* Classess */
+
+.form-dropdown {
+    width: calc(33.33% - 1rem);
+}
+
+.blood-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blood-sub-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.blood-sub-container label {
+    margin-left: 0.5rem;
+}
+
+.birth-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.birth-sub-container {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.birth-sub-container:last-child {
+    margin-right: 0;
+}
+
+.gender-occupation-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+}
+
+.radio-container label {
+    margin-right: 1rem;
+}
+
+.number-email-container,
+.weight-pulse-container,
+.bloodpressure-temperature-container,
+.donationstatus-lastdonation-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lastsixmonths-container,
+.history-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.number-container,
+.email-container,
+.weight-container,
+.pulse-container,
+.bloodpressure-container,
+.temperature-container,
+.donationstatus-container,
+.lastdonation-container,
+.suffer-container,
+.taken-container {
+    width: 50%;
+}
+
+.main-suffer-container,
+.main-taken-container {
+    display: flex;
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.radio-container input {
+    margin-right: 1.5rem;
+}
+
+
+
+.bookmark {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    transform: translateY(50%);
+    height: 9rem;
+    width: 3rem;
+    padding: 0px;
+    transform: rotate(0deg) skew(0deg);
+    border-left: 25px solid red;
+    border-right: 25px solid red;
+    border-bottom: 25px solid transparent;
+}
+
+
+/* IDs */
+
+#title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+#description {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-style: italic;
+    font-weight: 350;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#gender-padding {
+    margin-right: 2rem;
+}
+
+#streetAddress,
+#cityAndProvince,
+#postalCode { 
+    width: 38.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.5rem;
+    font-size: 1.1rem;
+}
+
+#submit {
+    width: 30%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: darkred;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 3rem;
+        margin: 3rem 0rem;
+    }
+    
+    #title {
+        font-size: 2.5rem;
+    }
+    
+    #description {
+        font-size: 1rem;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="time"],
+    input[type="tel"],
+    input[type="url"],
+    input[type="search"],
+    input[type="color"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    select.form-dropdown {
+        width: 100%;
+    }
+    
+    .form-dropdown {
+        width: 100%;
+    }
+    
+    .container {
+        margin-right: 0;
+    }
+    
+    .number-container,
+    .email-container,
+    .weight-container,
+    .pulse-container,
+    .bloodpressure-container,
+    .temperature-container,
+    .donationstatus-container,
+    .lastdonation-container,
+    .suffer-container,
+    .taken-container {
+        width: 100%;
+    }
+}
