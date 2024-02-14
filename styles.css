@@ -34,9 +34,9 @@ body {
 
 main {
     background-color: rgba(255, 255, 255, 0.9);
-    width: 50rem;
-    padding: 5rem;
-    margin: 5rem 0rem;
+    width: clamp(15rem, 90vw, 50rem);
+    padding: clamp(1rem, 10vw ,5rem);
+    margin-top: clamp(0.5rem, 6vw, 5rem);
     opacity: 0.8;
     border-radius: 1rem;
     position: relative;
@@ -45,7 +45,7 @@ main {
 h3 {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.4rem;
+    font-size: clamp(1rem, 0vw, 1.4rem);
     font-weight: 650;
 }
 
@@ -58,7 +58,7 @@ label[for^="yes"] {
 
 
 select.form-dropdown {
-    width: 8.7rem;
+    width: clamp(5rem, 20vw, 8.7rem);
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--secondary-color);
@@ -84,7 +84,7 @@ input[type="color"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="week"] {
-    width: 18.5rem;
+    width: 100%;
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--secondary-color);
@@ -164,16 +164,6 @@ footer {
     margin-right: 0;
 }
 
-.gender-occupation-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.container {
-    flex: 1;
-    margin-right: 10px;
-}
-
 .radio-container {
     display: flex;
     align-items: center;
@@ -183,18 +173,15 @@ footer {
     margin-right: 1rem;
 }
 
+.lastsixmonths-container,
+.history-container,
 .number-email-container,
-.weight-pulse-container,
 .bloodpressure-temperature-container,
-.donationstatus-lastdonation-container {
+.donationstatus-lastdonation-container,
+.gender-occupation-container,
+.weight-pulse-container  {
     display: flex;
     justify-content: space-between;
-}
-
-.lastsixmonths-container,
-.history-container {
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .number-container,
@@ -206,8 +193,19 @@ footer {
 .donationstatus-container,
 .lastdonation-container,
 .suffer-container,
-.taken-container {
+.taken-container,
+.container,
+.lastdonation-container,
+.donationstatus-container {
     width: 50%;
+}
+
+.number-email-container,
+.weight-pulse-container,
+.bloodpressure-temperature-container,
+.donationstatus-lastdonation-container,
+.gender-occupation-container {
+    gap: 1rem;
 }
 
 .main-suffer-container,
@@ -233,9 +231,8 @@ footer {
     top: 0;
     right: 10%;
     transform: translateY(50%);
-    height: 9rem;
-    width: 3rem;
-    padding: 0px;
+    height: clamp(8rem, 30vw, 9rem);
+    width: clamp(0.5rem, 40vw, 3rem);
     transform: rotate(0deg) skew(0deg);
     border-left: 25px solid red;
     border-right: 25px solid red;
@@ -246,9 +243,10 @@ footer {
 /* IDs */
 
 #title {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 11vw, 3rem);
     margin-bottom: 2rem;
     color: var(--primary-color);
+    font-weight: 800;
 }
 
 #description {
@@ -263,15 +261,11 @@ footer {
     flex-direction: column;
 }
 
-#gender-padding {
-    margin-right: 2rem;
-}
-
 #streetAddress,
 #cityAndProvince,
 #postalCode,
 #name { 
-    width: 38.5rem;
+    width: clamp(100%, 10vw, 38.5rem);
     padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid var(--secondary-color);
@@ -299,47 +293,34 @@ footer {
     background-color: darkred;
 }
 
+
 /* Media Query */
 
-@media screen and (max-width: 768px) {
-    main {
-        padding: 3rem;
-        margin: 3rem 0rem;
+@media only screen and (max-width: 768px) {
+    .main-blood-container {
+        display: flex;
+        justify-content: flex-start;
     }
-    
-    #title {
-        font-size: 2.5rem;
+
+    .blood-container {
+        display: flex;
+        flex-direction: column;
     }
-    
-    #description {
-        font-size: 1rem;
-    }
-    
-    input[type="text"],
-    input[type="number"],
-    input[type="email"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"],
-    input[type="tel"],
-    input[type="url"],
-    input[type="search"],
-    input[type="color"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="week"],
-    select.form-dropdown {
+
+    .blood-sub-container {
         width: 100%;
+        padding-right: clamp(2rem, 15vw, 15rem);
     }
-    
-    .form-dropdown {
-        width: 100%;
+
+    .gender-occupation-container,
+    .number-email-container,
+    .weight-pulse-container,
+    .bloodpressure-temperature-container,
+    .donationstatus-lastdonation-container,
+    .lastsixmonths-container  {
+        display: block;
     }
-    
-    .container {
-        margin-right: 0;
-    }
-    
+
     .number-container,
     .email-container,
     .weight-container,
@@ -349,34 +330,18 @@ footer {
     .donationstatus-container,
     .lastdonation-container,
     .suffer-container,
-    .taken-container {
-        width: 100%;
-    }
-
-    .bookmark {
-        height: 7rem;
-    }
+    .taken-container,
+    .container,
+    .lastdonation-container,
+    .donationstatus-container {
+    width: 100%;
 }
 
-@media screen and (max-width: 767px) {
-    main {
-        min-width: 300px;
+    .lastsixmonths-container,
+    .main-suffer-container,
+    .main-taken-container,
+    .history-container  {
+        display: flex;
+        flex-direction: column;
     }
-
-    #streetAddress,
-    #cityAndProvince,
-    #postalCode,
-    #name { 
-    width: 20rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid var(--secondary-color);
-    border-radius: 4px;
-    appearance: none;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ccc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 1.5rem;
-    font-size: 1.1rem;
-}
 }
