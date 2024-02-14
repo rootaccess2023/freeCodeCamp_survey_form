@@ -1,10 +1,10 @@
 # freeCodeCamp_survey_form
 
-# Survey Form Project (Blood Donation Form)
+## Survey Form Project (Blood Donation Form)
 
 This survey form is part of the FreeCodeCamp curriculum, specifically for the Responsive Web Design section. It's a hands-on project designed to reinforce key concepts in HTML and CSS, ensuring that users can create functional forms with proper input validation.
 
-# Viewing the Project
+## Viewing the Project
 
 If you would like to view the fully implemented survey form, you can access it online at the following link:
 
