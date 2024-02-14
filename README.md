@@ -8,6 +8,8 @@ This survey form is part of the FreeCodeCamp curriculum, specifically for the Re
 
 If you would like to view the fully implemented survey form, you can access it online at the following link:
 
+<img src="Blood Donation Form.png" alt="Blood Donation Form">
+
 <a href="https://rootaccess2023.github.io/freeCodeCamp_survey_form/">View Blood Donation Survey Form</a>
 
 ## Project Description
