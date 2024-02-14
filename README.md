@@ -8,7 +8,7 @@ This survey form is part of the FreeCodeCamp curriculum, specifically for the Re
 
 If you would like to view the fully implemented survey form, you can access it online at the following link:
 
-View Survey Form
+[View Survey Form](#)
 
 ## Project Description
 
