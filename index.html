@@ -21,6 +21,7 @@
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
             
             <h3>Select Your Blood Type:</h3>
+            <div class="main-blood-container">
             <div class="blood-container">
                 <div class="blood-sub-container">
                     <input type="radio" id="A+" name="bloodType" value="A+">
@@ -64,10 +65,11 @@
                     <label for="O-">O- negative</label>
                 </div>
             </div>
+            </div>
             
             <h3 id="birthDate" for="birthDate">Birth Date:</h3>
             <div class="birth-container">
-                <div class="birth-sub-container">
+                <div class="birth-sub-container block">
                     <label for="birthMonth">Month:</label>
                     <select id="dropdown" name="birthMonth" class="form-dropdown">
                         <option value="Select"></option>
@@ -86,7 +88,7 @@
                     </select>
                 </div>
 
-                <div class="birth-sub-container">
+                <div class="birth-sub-container block">
                     <label id="dropdown" for="birthDay">Day:</label>
                     <select id="birthDay" name="birthDay" class="form-dropdown">
                         <option value="Select"></option>
@@ -124,7 +126,7 @@
                     </select>
                 </div>
 
-                <div class="birth-sub-container">
+                <div class="birth-sub-container block">
                     <label id="dropdown" for="birthYear">Year:</label>
                     <select id="birthYear" name="birthYear" class="form-dropdown">
                         <option value="Select"></option>
@@ -189,7 +191,7 @@
             
 
             <div class="number-email-container">
-                <div clas="number-container">
+                <div class="number-container">
                     <h3 id="number-label" for="number">Mobile Number:</h3>
                     <input type="number" min="12" max="12" id="number" name="number" placeholder="Enter your Mobile number"
                     pattern="(09|\+639)\d{9}" title="Please enter a valid mobile number" required>
@@ -233,10 +235,12 @@
             </div>
 
             <div class="bloodpressure-temperature-container">
-                <div class="bloodpresure-container">
+                <div class="bloodpressure-container">
                     <h3 for="bloodPressure">Blood Pressure (mmHg):</h3>
+                    <div class="bloodpressure-sub-container">
                     <input type="number" id="bloodPressure" name="bloodPressure"
                     placeholder="90 and 160 systolic / 60 and 100 diastolic" min="0" max="160" required>
+                    </div>
                 </div>
 
                 <div class="temperature-container">
@@ -266,12 +270,18 @@
             <div>
                 <h3> In the last six months, have you had any of the following?</h3>
                 <div class="lastsixmonths-container">
+                    <div>
                     <input type="checkbox" id="tattooing" name="activities" value="tattooing">
                     <label for="tattooing">Tattooing</label>
+                    </div>
+                    <div>
                     <input type="checkbox" id="earPiercing" name="activities" value="earPiercing">
                     <label for="earPiercing">Ear Piercing</label>
+                    </div>
+                    <div>
                     <input type="checkbox" id="dentalExtraction" name="activities" value="dentalExtraction">
                     <label for="dentalExtraction">Dental Extraction</label>
+                    </div>
                 </div>
             </div>
 
@@ -350,20 +360,32 @@
                 <h3>Are you taking or have you taken any of these in the past 72 hours?</h3>
                 <div class="main-taken-container">
                     <div class="taken-container">
+                        <div>
                         <input type="checkbox" id="antibiotics" name="medications" value="antibiotics">
                         <label for="antibiotics">Antibiotics</label>
+                        </div>
+                        <div>
                         <input type="checkbox" id="steroids" name="medications" value="steroids">
                         <label for="steroids">Steroids</label>
+                        </div>
+                        <div>
                         <input type="checkbox" id="aspirin" name="medications" value="aspirin">
                         <label for="aspirin">Aspirin</label>
+                        </div>
                     </div>
                     <div class="taken-container">
+                        <div>
                         <input type="checkbox" id="vaccinations" name="medications" value="vaccinations">
                         <label for="vaccinations">Vaccinations</label>
+                        </div>
+                        <div>
                         <input type="checkbox" id="alcohol" name="medications" value="alcohol">
                         <label for="alcohol">Alcohol</label>
+                        </div>
+                        <div>
                         <input type="checkbox" id="rabiesVaccine" name="medications" value="rabiesVaccine">
                         <label for="rabiesVaccine">Bites</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -371,14 +393,20 @@
             <div>
                 <h3>Is there any history of surgery or blood transfusion in the past six months?</h3>
                 <div class="history-container">
+                    <div>
                     <input type="checkbox" id="majorSurgery" name="surgeryTransfusion" value="majorSurgery">
                     <label for="majorSurgery">Major Surgery</label>
+                    </div>
 
+                    <div>
                     <input type="checkbox" id="minorSurgery" name="surgeryTransfusion" value="minorSurgery">
                     <label for="minorSurgery">Minor Surgery</label>
+                    </div>
 
+                    <div>
                     <input type="checkbox" id="bloodTransfusion" name="surgeryTransfusion" value="bloodTransfusion">
                     <label for="bloodTransfusion">Blood Transfusion</label>
+                    </div>
                 </div>
             </div>
             <div class="comment-container">
